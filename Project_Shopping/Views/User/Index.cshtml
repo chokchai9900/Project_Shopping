@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Project_Shopping.Models.UserDBModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>User List</h1>
+
+<p>
+    <a asp-action="RegisterUser">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model._id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.role)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.username)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fitst_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.phonenumber)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item._id)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.role)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => item.username)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.phonenumber)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
